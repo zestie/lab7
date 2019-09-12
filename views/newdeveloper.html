@@ -1,0 +1,37 @@
+<!-- adds a new document to ‘Developers’ collection -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>ZC: New Developer</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body> 
+        <h1>ZC: New Developer</h1>
+        <a href="/"><h2>Home</h2></a>&nbsp;&nbsp;
+        <a href="/newtask"><h2>Add Task</h2></a>&nbsp;&nbsp;
+        <a href="/listtasks"><h2>List Tasks</h2></a>&nbsp;&nbsp;
+        <a href="/listdevelopers"><h2>List Developers</h2></a>&nbsp;&nbsp;
+        <a href="/updatetask"><h2>Update Tasks</h2></a>&nbsp;&nbsp;
+        <a href="/delete"><h2>Delete Tasks</h2></a><br><br>
+        <form action="/addeveloper" method="POST" align="right">
+            Full Name:<font color="red">*</font> &nbsp;
+            <input type="text" name="firstName" placeholder="First Name" required></input><br>
+            <input type="text" name="lastName" placeholder="Last Name"></input><br>
+            level(BEGINNER or EXPERT):<font color="red">*</font> &nbsp;
+            <input type="text" name="level" placeholder="BEGINNER OR EXPERT IN CAPS" required></input><br>
+            <!-- <select name="level" required>
+                <option name="BEGINNER">BEGINNER</option>
+                <option name="EXPERT">EXPERT</option>
+            </select><br> -->
+            Address: &nbsp;
+            <input type="text" name="unit" placeholder="Unit"></input><br>
+            <input type="text" name="street" placeholder="Street"></input><br>
+            <input type="text" name="suburb" placeholder="Suburb"></input><br>
+            <input type="text" name="state" placeholder="State"></input><br>
+            Fields with <font color="red">*</font>  are mandetory. <br>
+            <button><h4>Add Task</h4></button>
+        </form>
+    </body>
+</html>

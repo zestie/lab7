@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>ZC: New Task</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body> 
+        <h1>ZC: New Task</h1>
+        <a href="/"><h2>Home</h2></a>&nbsp;&nbsp;
+        <a href="/newdeveloper"><h2>Add Developer</h2></a>&nbsp;&nbsp;
+        <a href="/listtasks"><h2>List Tasks</h2></a>&nbsp;&nbsp;
+        <a href="/listdevelopers"><h2>List Developers</h2></a>&nbsp;&nbsp;
+        <a href="/updatetask"><h2>Update Tasks</h2></a>&nbsp;&nbsp;
+        <a href="/delete"><h2>Delete Tasks</h2></a><br><br>
+        <form action="/addtask" method="POST" align="right">
+            Name:<font color="red">*</font> &nbsp;
+            <input type="text" name="name"></input><br>
+            Assign: &nbsp;
+            <input type="text" name="assign"></input><br>
+            Due Date: &nbsp;
+            <input type="date" name="due"></input><br>
+            Status: &nbsp;
+            <select name="status">
+                <option name="inprogress">InProgress</option>
+                <option name="complete">Complete</option>
+            </select><br>
+            Description: &nbsp;
+            <input type="text" name="desc"></input><br>
+            Fields with <font color="red">*</font> are mandetory. <br>
+            <button><h4>Add Task</h4></button>
+        </form>
+    </body>
+</html>

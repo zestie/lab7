@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>ZC: Update Task</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body> 
+        <h1>ZC: Update Tasks</h1>
+        <a href="/"><h2>Home</h2></a>&nbsp;&nbsp;
+        <a href="/newtask"><h2>Add Task</h2></a>&nbsp;&nbsp;
+        <a href="/newdeveloper"><h2>Add Developer</h2></a>&nbsp;&nbsp;
+        <a href="/listtasks"><h2>List Tasks</h2></a>&nbsp;&nbsp;
+        <a href="/listdevelopers"><h2>List Developers</h2></a>&nbsp;&nbsp;
+        <a href="/delete"><h2>Delete Tasks</h2></a><br><br>
+        <form action="/taskupdate" method="POST" align="right">            
+            Enter Task ID to update the Task's Status to Complete: <br>
+            <input type="text" name="_id"></input><br>
+            <button><h4>Update Task</h4></button>
+        </form>
+    </body>
+</html>

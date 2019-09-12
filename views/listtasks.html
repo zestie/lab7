@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>ZC: Lists of Tasks</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body>    
+        <h1>ZC: Tasks List</h1>
+        <a href="/"><h2>Home</h2></a>&nbsp;&nbsp;
+        <a href="/newtask"><h2>Add Task</h2></a>&nbsp;&nbsp;
+        <a href="/newdeveloper"><h2>Add Developer</h2></a>&nbsp;&nbsp;
+        <a href="/listdevelopers"><h2>List Developers</h2></a>&nbsp;&nbsp;
+        <a href="/updatetask"><h2>Update Tasks</h2></a>&nbsp;&nbsp;
+        <a href="/delete"><h2>Delete Tasks</h2></a><br><br>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Assigned to</th>
+                <th>Due Date</th>
+                <th>Status</th>
+                <th>Description</th>
+            </tr>
+            <% for(let i = 0; i < Tasks.length; i++){ %>
+            <tr>
+                <td><%= Tasks[i]._id %></td>
+                <td><%= Tasks[i].name %></td>
+                <td><%= Tasks[i].assign %></td>
+                <td><%= Tasks[i].due %></td>
+                <td><%= Tasks[i].status %></td>
+                <td><%= Tasks[i].desc %></td>
+            </tr>
+            <%} %>
+        </table>
+    </body>
+</html>

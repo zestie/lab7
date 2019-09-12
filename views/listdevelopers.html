@@ -1,0 +1,35 @@
+<!-- shows all the Developers in a table format (including the _id field) -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>ZC: Lists of Developers</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body>    
+        <h1>ZC: Developers List</h1>
+        <a href="/"><h2>Home</h2></a>&nbsp;&nbsp;
+        <a href="/newtask"><h2>Add Task</h2></a>&nbsp;&nbsp;
+        <a href="/newdeveloper"><h2>Add Developer</h2></a>&nbsp;&nbsp;
+        <a href="/listtasks"><h2>List Tasks</h2></a>&nbsp;&nbsp;
+        <a href="/updatetask"><h2>Update Tasks</h2></a>&nbsp;&nbsp;
+        <a href="/delete"><h2>Delete Tasks</h2></a><br><br>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Full Name</th>
+                <th>Level</th>
+                <th>Address</th>
+            </tr>
+            <% for(let i = 0; i < Developers.length; i++){ %>
+            <tr>
+                <td><%= Developers[i]._id %></td>
+                <td><%= Developers[i].name.firstName + ' ' + Developers[i].name.lastName %></td>
+                <td><%= Developers[i].level %></td>
+                <td><%= Developers[i].address.unit + ', ' + Developers[i].address.street + ', ' + Developers[i].address.suburb + ', ' + Developers[i].address.state %></td>
+            </tr>
+            <%} %>
+        </table>
+    </body>
+</html>
